@@ -15,7 +15,7 @@ jobs:
           command: |
             dnf install python3-pip -y
             python3 -V
-            python3 -m pip install request nsepython
+            python3 -m pip install requests nsepython
       - run:
           name: Send Message notification to OpenShift
           command: |
