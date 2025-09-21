@@ -7,13 +7,13 @@ url = "https://www.nseindia.com/api/live-analysis-volume-gainers"
 
 # Webhook URL
 
-webhook_url = "http://localhost:8000/maswebhook"
-#webhook_url = "https://fastapi-webhook-receiver.vercel.app/mvetfwebhook"
+#webhook_url = "http://localhost:8000/maswebhook"
+webhook_url = "https://fastapi-webhook-receiver.vercel.app/maswebhook"
 
 
 # Fetch stock data
 stocks_data = nsefetch(url)
-print(stocks_data)
+# print(stocks_data)
 # Loop through each stock and post to the webhook
 for stockdata in stocks_data.get('data', []):
     payload = {
