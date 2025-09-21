@@ -7,7 +7,8 @@ url = "https://www.nseindia.com/api/etf"
 
 # Webhook URL
 #webhook_url = "https://fastapi-webhook-receiver.vercel.app/webhook"
-webhook_url = "http://localhost:8000/etfwebhook"
+#webhook_url = "http://localhost:8000/etfwebhook"
+webhook_url = "https://fastapi-webhook-receiver.vercel.app/etfwebhook"
 
 
 # Fetch ETF data
