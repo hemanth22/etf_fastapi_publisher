@@ -1,0 +1,35 @@
+version: 2.1
+
+executors:
+  default:
+    docker:
+      - image: quay.io/hemanth22/rockylinux9:9
+
+jobs:
+  build:
+    executor: default
+    steps:
+      - checkout
+      - run:
+          name: Print Python Verson
+          command: |
+            dnf install python3-pip -y
+            python3 -V
+            python3 -m pip install requests
+      - run:
+          name: Send Message notification to OpenShift
+          command: |
+            python3 mostactiveetfvol.py
+
+
+workflows:
+  notify_app:
+    jobs:
+      - build
+    triggers:
+      - schedule:
+          cron: "55 9 * * *"
+          filters:
+            branches:
+              only:
+                - main
