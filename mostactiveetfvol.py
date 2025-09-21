@@ -7,7 +7,8 @@ url = "https://www.nseindia.com/api/live-analysis-most-active-etf?index=volume"
 
 # Webhook URL
 #webhook_url = "https://fastapi-webhook-receiver.vercel.app/webhook"
-webhook_url = "http://localhost:8000/etfwebhook"
+#webhook_url = "http://localhost:8000/etfwebhook"
+webhook_url = "http://localhost:8000/mvetfwebhook"
 
 
 # Fetch ETF data
@@ -32,10 +33,10 @@ for etf in etf_data.get('data', []):
 
     try:
        print(payload)
-#       response = requests.post(webhook_url, json=payload)
-#       if response.status_code == 200:
-#           print(f"✅ Sent data for {payload['symbol']}")
-#       else:
-#          print(f"⚠️ Failed to send {payload['symbol']}: {response.status_code} - {response.text}")
+       response = requests.post(webhook_url, json=payload)
+       if response.status_code == 200:
+           print(f"✅ Sent data for {payload['symbol']}")
+       else:
+          print(f"⚠️ Failed to send {payload['symbol']}: {response.status_code} - {response.text}")
     except requests.RequestException as e:
         print(f"❌ Error sending data for {payload['symbol']}: {e}")
