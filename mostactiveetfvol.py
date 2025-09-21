@@ -8,7 +8,9 @@ url = "https://www.nseindia.com/api/live-analysis-most-active-etf?index=volume"
 # Webhook URL
 #webhook_url = "https://fastapi-webhook-receiver.vercel.app/webhook"
 #webhook_url = "http://localhost:8000/etfwebhook"
-webhook_url = "http://localhost:8000/mvetfwebhook"
+#webhook_url = "http://localhost:8000/mvetfwebhook"
+#webhook_url = "https://fastapi-webhook-receiver-git-releasev11-hemanth-bitras-projects.vercel.app/mvetfwebhook"
+webhook_url = "https://fastapi-webhook-receiver.vercel.app/mvetfwebhook"
 
 
 # Fetch ETF data
