@@ -17,10 +17,13 @@ jobs:
             python3 -V
             python3 -m pip install requests nsepython
       - run:
-          name: Send Message notification to OpenShift
+          name: ETF Most Active Volume
           command: |
             python3 mostactiveetfvol.py
-
+      - run:
+          name: Stock Most Active Volume
+          command: |
+            python3 mostactivestocks.py
 
 workflows:
   notify_app:

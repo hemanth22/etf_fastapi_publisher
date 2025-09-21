@@ -36,3 +36,8 @@ jobs:
     - name: Execute Most Active ETF Volume
       run: |
         python mostactiveetfvol.py
+
+
+    - name: Execute Most Active Stocks Volume
+      run: |
+        python mostactivestocks.py
