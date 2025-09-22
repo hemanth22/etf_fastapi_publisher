@@ -31,12 +31,11 @@ jobs:
 
     - name: Execute Most Active ETF Volume
       run: |
-        python etf.py
-
-    - name: Execute Most Active ETF Volume
-      run: |
         python mostactiveetfvol.py
 
+    - name: Wait for 5 seconds
+      run: |
+        python -c "import time; time.sleep(5)"
 
     - name: Execute Most Active Stocks Volume
       run: |

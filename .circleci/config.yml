@@ -20,6 +20,12 @@ jobs:
           name: ETF Most Active Volume
           command: |
             python3 mostactiveetfvol.py
+
+      - run:
+          name: Wait for 5 seconds
+          command: |
+            python3 -c "import time; time.sleep(5)"
+
       - run:
           name: Stock Most Active Volume
           command: |
