@@ -22,9 +22,9 @@ jobs:
             python3 mostactiveetfvol.py
 
       - run:
-          name: Wait for 5 seconds
+          name: Wait for 61 seconds
           command: |
-            python3 -c "import time; time.sleep(5)"
+            python3 -c "import time; time.sleep(61)"
 
       - run:
           name: Stock Most Active Volume

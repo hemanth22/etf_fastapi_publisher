@@ -8,6 +8,7 @@ url = "https://www.nseindia.com/api/live-analysis-volume-gainers"
 # Webhook URL
 
 #webhook_url = "http://localhost:8000/maswebhook"
+#webhook_url = "http://193.16.16.9:5000/maswebhook"
 webhook_url = "https://fastapi-webhook-receiver.vercel.app/maswebhook"
 
 
